@@ -1,0 +1,41 @@
+<!--
+  Generated template for the Overseas page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header  class="nanum">
+  <ion-navbar color="restaurant-color">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>해외여행</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="restaurants attractions common-bg nanum">
+  <div class="card round" margin-bottom *ngFor="let oversea of overseas" (click)="viewOverseas(oversea.id)">
+    <div class="card-header" [ngStyle]="{'background-image': 'url(' + oversea.thumb + ')'}"></div>
+    <div class="padding-xs">
+      <h5>{{ oversea.name }}</h5>
+      <div class="rating">
+        <ion-icon name="md-star" color="restaurant-color" *ngFor="let star of range(oversea.rating)"></ion-icon>
+        <ion-icon name="md-star" color="gray" *ngFor="let star of range(5 - oversea.rating)"></ion-icon>
+        <span color="gray"> 후기 {{ oversea.reviews.length }} </span>
+      </div>
+      <span color="gray" style="font-weight: bold">{{oversea.class}}</span>
+      <div>
+        <div class="pull-left">
+          <span color="restaurant-color">{{ oversea.scores[0].name }},</span>
+          <span color="restaurant-color">{{ oversea.scores[1].name }}</span>
+        </div>
+        <div class="pull-right">
+          <span color="gray"> 1인 </span>
+          <span style="color:#2196f3;font-weight: bold">{{ oversea.cost }}</span>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</ion-content>

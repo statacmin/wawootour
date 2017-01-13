@@ -2,7 +2,8 @@ export let ATTRACTIONS = [
    {
     id: 1,
     name: "솔향 품은 녹색도시를 달리다.",
-    cost: "￦ 30,000",
+    cost: "￦30,000",
+    class: "가이드투어",
     location: {
       lat: 37.822498,
       lon: 128.885359,
@@ -74,7 +75,8 @@ export let ATTRACTIONS = [
   {
     id: 2,
     name: "대관령 국제 힐클라임 대회",
-    cost: "￦ 99,000",
+    cost: "￦99,000",
+    class: "가이드투어",
     location: {
       lat: 37.822498,
       lon: 128.885359,
@@ -146,7 +148,8 @@ export let ATTRACTIONS = [
  {
     id: 3,
     name: "강릉에서 고성까지, 동해안을 끼고 달리다",
-    cost: "￦ 67,000",
+    cost: "￦67,000",
+    class: "가이드투어",
     location: {
       lat: 37.822498,
       lon: 128.885359,
@@ -218,7 +221,8 @@ export let ATTRACTIONS = [
   {
     id: 4,
     name: "신나는 자전거 여행",
-    cost: "￦ 27,000",
+    cost: "￦27,000",
+    class: "가이드투어",
     location: {
       lat: 37.822498,
       lon: 128.885359,

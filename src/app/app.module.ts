@@ -10,6 +10,7 @@ import {HotelService} from '../services/hotel-service';
 import {RestaurantService} from '../services/restaurant-service';
 import {ActivityService} from '../services/activity-service';
 import {AttractionService} from '../services/attraction-service';
+import {OverseasService} from '../services/overseas-service';
 import {ContactService} from '../services/contact-service';
 // end import services
 // end import services
@@ -33,6 +34,10 @@ import { SearchPage} from '../pages/search/search';
 import { SettingPage} from '../pages/setting/setting';
 import { WelcomePage} from '../pages/welcome/welcome';
 import { TestPage } from '../pages/test/test';
+import { OverseasPage } from '../pages/overseas/overseas';
+import { OverseasDetailPage } from '../pages/overseas-detail/overseas-detail';
+import { LeisurePage } from '../pages/leisure/leisure';
+import { HealingPage } from '../pages/healing/healing';
 // end import pages
 
 @NgModule({
@@ -55,7 +60,11 @@ import { TestPage } from '../pages/test/test';
     SearchPage,
     SettingPage,
     WelcomePage,
-    TestPage
+    TestPage,
+    OverseasPage,
+    OverseasDetailPage,
+    LeisurePage,
+    HealingPage
 ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -80,7 +89,11 @@ import { TestPage } from '../pages/test/test';
     SearchPage,
     SettingPage,
     WelcomePage,
-    TestPage
+    TestPage,
+    OverseasPage,
+    OverseasDetailPage,
+    LeisurePage,
+    HealingPage
 ],
   providers: [
     FoodCategoryService,
@@ -88,10 +101,9 @@ import { TestPage } from '../pages/test/test';
     GatewayService,
     HotelService,
     RestaurantService,
-
-    
     ActivityService,
     AttractionService,
+    OverseasService,
     ContactService
     /* import services */
 ]

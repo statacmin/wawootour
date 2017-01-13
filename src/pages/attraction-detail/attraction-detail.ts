@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 import {NavController, Platform} from "ionic-angular";
 import {AttractionService} from "../../services/attraction-service";
-
+import { NavParams } from 'ionic-angular';
 
 declare var google: any;
 /*
@@ -24,9 +24,10 @@ export class AttractionDetailPage {
   // rating values
   public ratingValues = [0, 0, 0, 0, 0];
 
-  constructor(public nav: NavController, public attractionService: AttractionService, public platform: Platform) {
+  constructor(public nav: NavController, public attractionService: AttractionService, public platform: Platform, private navParams: NavParams) {
     // set sample data
-    this.attraction = attractionService.getItem(1);
+    let id = navParams.get('id');
+    this.attraction = attractionService.getItem(id);
 
     // when platform ready, init map
     platform.ready().then(() => {

@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header  class="nanum">
   <ion-navbar color="restaurant-color">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -13,7 +13,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="restaurants attractions common-bg">
+<ion-content padding class="restaurants attractions common-bg nanum">
   <div class="card round" margin-bottom *ngFor="let restaurant of restaurants" (click)="viewRestaurant(restaurant.id)">
     <div class="card-header" [ngStyle]="{'background-image': 'url(' + restaurant.thumb + ')'}"></div>
     <div class="padding-xs">
@@ -21,16 +21,17 @@
       <div class="rating">
         <ion-icon name="md-star" color="restaurant-color" *ngFor="let star of range(restaurant.rating)"></ion-icon>
         <ion-icon name="md-star" color="gray" *ngFor="let star of range(5 - restaurant.rating)"></ion-icon>
-        <span color="gray">{{ restaurant.reviews.length }} reviews</span>
+        <span color="gray"> 후기 {{ restaurant.reviews.length }} </span>
       </div>
-      <span color="gray">Recommended for:</span>
+      <span color="gray" style="font-weight: bold">{{restaurant.class}}</span>
       <div>
         <div class="pull-left">
           <span color="restaurant-color">{{ restaurant.scores[0].name }},</span>
           <span color="restaurant-color">{{ restaurant.scores[1].name }}</span>
         </div>
         <div class="pull-right">
-          {{ restaurant.location.distance }} km
+          <span color="gray"> 1인 </span>
+          <span style="color:#2196f3;font-weight: bold">{{ restaurant.cost }}</span>
         </div>
         <div class="clear"></div>
       </div>

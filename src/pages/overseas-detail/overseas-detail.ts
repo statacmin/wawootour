@@ -1,23 +1,23 @@
 import {Component} from "@angular/core";
 import {NavController, Platform} from "ionic-angular";
-import {RestaurantService} from "../../services/restaurant-service";
+import {OverseasService} from "../../services/overseas-service";
 import { NavParams } from 'ionic-angular';
 
 declare var google: any;
 
 /*
- Generated class for the LoginPage page.
+  Generated class for the OverseasDetail page.
 
- See http://ionicframework.com/docs/v2/components/#navigation for more info on
- Ionic pages and navigation.
- */
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+*/
 @Component({
-  selector: 'page-restaurant-detail',
-  templateUrl: 'restaurant-detail.html'
+  selector: 'page-overseas-detail',
+  templateUrl: 'overseas-detail.html'
 })
-export class RestaurantDetailPage {
+export class OverseasDetailPage {
   // restaurant info
-  public restaurant: any;
+  public overseas: any;
   // default rating
   public rating = 0;
   // Map
@@ -25,10 +25,10 @@ export class RestaurantDetailPage {
   // rating values
   public ratingValues = [0, 0, 0, 0, 0];
 
-  constructor(public nav: NavController, public restaurantService: RestaurantService, public platform: Platform, private navParams: NavParams) {
+  constructor(public nav: NavController, public overseasService: OverseasService, public platform: Platform, private navParams: NavParams) {
     // set sample data
     let id = navParams.get('id');
-    this.restaurant = restaurantService.getItem(id);
+    this.overseas = overseasService.getItem(id);
 
     // when platform ready, init map
     platform.ready().then(() => {
@@ -38,8 +38,8 @@ export class RestaurantDetailPage {
     });
 
     // process reviews data
-    for (let key in this.restaurant.reviews) {
-      this.ratingValues[this.restaurant.reviews[key].rating - 1]++;
+    for (let key in this.overseas.reviews) {
+      this.ratingValues[this.overseas.reviews[key].rating - 1]++;
     }
   }
 
@@ -54,7 +54,8 @@ export class RestaurantDetailPage {
   }
 
   initializeMap() {
-    let latLng = new google.maps.LatLng(this.restaurant.location.lat, this.restaurant.location.lon);
+  
+    let latLng = new google.maps.LatLng(this.overseas.location.lat, this.overseas.location.lon);
 
     let mapOptions = {
       center: latLng,
@@ -76,5 +77,5 @@ export class RestaurantDetailPage {
     setTimeout(() => {
       google.maps.event.trigger(this.map, 'resize');
     }, 300);
-  }
+  } 
 }

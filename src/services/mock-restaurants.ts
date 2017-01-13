@@ -2,7 +2,8 @@ export let RESTAURANTS = [
   {
     id: 1,
     name: "[최저가보장] 사천 커피 여행",
-    cost: "￦ 57,000",
+    cost: "￦57,000",
+    class: "가이드투어",
     location: {
       lat: 37.822498,
       lon: 128.885359,
@@ -74,7 +75,8 @@ export let RESTAURANTS = [
   {
     id: 2,
     name: "[커피명인] 박이추 커피공장",
-    cost: "￦ 47,000",
+    cost: "￦47,000",
+    class: "가이드투어",
     location: {
       lat: 37.822498,
       lon: 128.885359,
@@ -146,7 +148,8 @@ export let RESTAURANTS = [
  {
     id: 3,
     name: "[강릉 안목항] 산토리니",
-    cost: "￦ 37,000",
+    cost: "￦37,000",
+    class: "e-티켓",
     location: {
       lat: 37.822498,
       lon: 128.885359,
@@ -218,7 +221,8 @@ export let RESTAURANTS = [
   {
     id: 4,
     name: "[커피 박물관] 커피커퍼",
-    cost: "￦ 17,000",
+    cost: "￦17,000",
+    class: "e-티켓",
     location: {
       lat: 37.822498,
       lon: 128.885359,

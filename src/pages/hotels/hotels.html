@@ -6,17 +6,17 @@
 -->
 <ion-header>
 
-  <ion-navbar color="hotel-color">
+  <ion-navbar color="hotel-color" class="nanum">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Hotels</ion-title>
+    <ion-title>사천로드</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding class="hotels attractions common-bg">
+<ion-content padding class="hotels attractions common-bg nanum">
   <div class="card round" margin-bottom *ngFor="let hotel of hotels" (click)="viewHotel(hotel.id)">
     <div class="card-header" [ngStyle]="{'background-image': 'url(' + hotel.thumb + ')'}"></div>
     <div class="padding-xs">
@@ -24,16 +24,17 @@
       <div class="rating">
         <ion-icon name="md-star" color="hotel-color" *ngFor="let star of range(hotel.rating)"></ion-icon>
         <ion-icon name="md-star" color="gray" *ngFor="let star of range(5 - hotel.rating)"></ion-icon>
-        <span color="gray">{{ hotel.reviews.length }} reviews</span>
+        <span color="gray"> 후기 {{ hotel.reviews.length }} </span>
       </div>
-      <span color="gray">Recommended for:</span>
+      <span color="gray" style="font-weight: bold">{{hotel.class}}</span>
       <div>
         <div class="pull-left">
           <span color="hotel-color">{{ hotel.scores[0].name }},</span>
           <span color="hotel-color">{{ hotel.scores[1].name }}</span>
         </div>
         <div class="pull-right">
-          {{ hotel.location.distance }} km
+          <span color="gray"> 1인 </span>
+          <span style="color:#2196f3;font-weight: bold">{{ hotel.cost }}</span>
         </div>
         <div class="clear"></div>
       </div>

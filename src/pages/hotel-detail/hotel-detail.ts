@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 import {NavController, Platform} from "ionic-angular";
 import {HotelService} from "../../services/hotel-service";
-
+import { NavParams } from 'ionic-angular';
 
 declare var google: any;
 /*
@@ -24,9 +24,10 @@ export class HotelDetailPage {
   // rating values
   public ratingValues = [0, 0, 0, 0, 0];
 
-  constructor(public nav: NavController, public hotelService: HotelService, public platform: Platform) {
+  constructor(public nav: NavController, public hotelService: HotelService, public platform: Platform, private navParams: NavParams) {
     // set sample data
-    this.hotel = hotelService.getItem(1);
+    let id = navParams.get('id');
+    this.hotel = hotelService.getItem(id);
 
     // when platform ready, init map
     platform.ready().then(() => {

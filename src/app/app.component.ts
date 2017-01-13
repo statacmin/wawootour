@@ -12,6 +12,7 @@ import {FindFriendPage} from '../pages/find-friend/find-friend';
 import {HotelsPage} from '../pages/hotels/hotels';
 import {RestaurantsPage} from '../pages/restaurants/restaurants';
 import {AttractionsPage} from '../pages/attractions/attractions';
+import { OverseasPage } from '../pages/overseas/overseas';
 
 // end import pages
 
@@ -56,6 +57,12 @@ export class MyApp {
       title: 'Attractions',
       count: 0,
       component: AttractionsPage
+    },
+
+    {
+      title: 'Overseas',
+      count: 0,
+      component: OverseasPage
     },
 
     {

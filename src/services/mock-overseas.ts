@@ -1,9 +1,9 @@
-export let HOTELS = [
+export let OVERSEAS = [
   {
     id: 1,
-    name: "[최고의 디저트] 커피콩빵",
-    cost: "￦10,000",
-    class: "e-티켓",
+    name: "[일본] 도토리현 자전거 여행",
+    cost: "￦350,000",
+    class: "가이드투어",
     location: {
       lat: 37.822498,
       lon: 128.885359,
@@ -36,7 +36,7 @@ export let HOTELS = [
         score: 59
       }
     ],
-    thumb: "assets/img/hotel/thumb/img_1.jpg",
+    thumb: "assets/img/overseas/thumb/img_1.jpg",
     reviews: [
       {
         id: 1,
@@ -74,9 +74,9 @@ export let HOTELS = [
   },
   {
     id: 2,
-    name: "[일출 명소] 사천항",
-    cost: "￦47,000",
-    class: "e-티켓",
+    name: "[캄보디아] 앙코르 유적과 함께하는 추억여행",
+    cost: "￦147,000",
+    class: "가이드투어",
     location: {
       lat: 37.822498,
       lon: 128.885359,
@@ -109,7 +109,7 @@ export let HOTELS = [
         score: 30
       }
     ],
-    thumb: "assets/img/hotel/thumb/img_2.jpg",
+    thumb: "assets/img/overseas/thumb/img_2.jpg",
     reviews: [
       {
         id: 1,
@@ -147,8 +147,8 @@ export let HOTELS = [
   },
  {
     id: 3,
-    name: "[명품 디저트] 사천진리한과",
-    cost: "￦17,000",
+    name: "[파타야] 알카자쇼(일반석 및 VIP)",
+    cost: "￦137,000",
     class: "e-티켓",
     location: {
       lat: 37.822498,
@@ -182,7 +182,7 @@ export let HOTELS = [
         score: 59
       }
     ],
-    thumb: "assets/img/hotel/thumb/img_3.jpg",
+    thumb: "assets/img/overseas/thumb/img_3.jpg",
     reviews: [
       {
         id: 1,
@@ -220,9 +220,9 @@ export let HOTELS = [
   },
   {
     id: 4,
-    name: "[사천의 명물] 사천 물회마을",
-    cost: "￦27,000",
-    class: "가이드투어",
+    name: "[청도] 야경과 맛있는 밥",
+    cost: "￦17,000",
+    class: "e-티켓",
     location: {
       lat: 37.822498,
       lon: 128.885359,
@@ -255,7 +255,7 @@ export let HOTELS = [
         score: 30
       }
     ],
-    thumb: "assets/img/hotel/thumb/img_4.jpg",
+    thumb: "assets/img/overseas/thumb/img_4.jpg",
     reviews: [
       {
         id: 1,

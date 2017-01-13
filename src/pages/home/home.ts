@@ -10,6 +10,9 @@ import {AttractionDetailPage} from '../attraction-detail/attraction-detail';
 import {RestaurantsPage} from "../restaurants/restaurants";
 import {HotelsPage} from "../hotels/hotels";
 import {AttractionsPage} from "../attractions/attractions";
+import {OverseasPage}  from "../overseas/overseas";
+import {OverseasService} from "../../services/overseas-service";
+import { OverseasDetailPage } from '../overseas-detail/overseas-detail';
 
 /*
  Generated class for the LoginPage page.
@@ -28,14 +31,17 @@ export class HomePage {
   public hotels: any;
   // attractions
   public attractions: any;
+  // overseas
+  public overseas: any;
 
   constructor(public app: App, public nav: NavController, public gatewayService: GatewayService,
               public hotelService: HotelService, public restaurantService: RestaurantService,
-              public attractionService: AttractionService) {
+              public attractionService: AttractionService, public overseasService: OverseasService) {
     // set sample data
     this.restaurants = restaurantService.getAll();
     this.hotels = hotelService.getAll();
     this.attractions = attractionService.getAll();
+    this.overseas = overseasService.getAll();
   }
 
    slides = [
@@ -74,6 +80,11 @@ export class HomePage {
     this.app.getRootNav().push(AttractionDetailPage, {id: id})
   }
 
+  //해외여행 상세
+  viewOversea(id) {
+    this.app.getRootNav().push(OverseasDetailPage, {id: id})
+  }
+
   // view all coffie
   viewAllCoffie() {
     this.app.getRootNav().push(RestaurantsPage);
@@ -87,6 +98,11 @@ export class HomePage {
   // view all restaurants
   viewAllAttractions() {
     this.app.getRootNav().push(AttractionsPage);
+  }
+
+  // view all oversea
+  viewAllOversea() {
+    this.app.getRootNav().push(OverseasPage);
   }
 
   // 메인 슬라이드 클릭시 해당 이벤트 페이지로 이동

@@ -1,0 +1,6 @@
+page-overseas-detail,
+.restaurant-detail {
+  // import extends css
+  $color-bar: color($colors, restaurant-color);
+  @import "../../theme/circle_progress";
+}
