@@ -16,7 +16,7 @@
 
 <ion-content padding class="restaurants attractions common-bg nanum">
   <div class="card round" margin-bottom *ngFor="let oversea of overseas" (click)="viewOverseas(oversea.id)">
-    <div class="card-header" [ngStyle]="{'background-image': 'url(' + oversea.thumb + ')'}"></div>
+    <div class="card-header" [ngStyle]="{'background-image': 'url(' +  oversea.thumb + ')'}"></div>
     <div class="padding-xs">
       <h5>{{ oversea.name }}</h5>
       <div class="rating">

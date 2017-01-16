@@ -26,7 +26,7 @@
 2. 폰트 색상 지정
 3. 이미지 및 폰트 정렬
 -->
-  <div (click)="viewProduct()">
+  <div (click)="viewProduct()" style="margin-top: 7px">
     <div class="product-left" >
             <ion-icon name="cart" color=""></ion-icon>
             <span color=""><strong> 와우투어 전용 쇼핑몰에서 강원도 특산품을 특가에 구매</strong></span>
@@ -61,7 +61,7 @@
 4. 제목은 두줄까지 표현(현재 글자가 자동으로 안내려가고 짤림)
 5. 두줄이 넘어갈 경우 말줄임 표시로 표현
   -->
-  <div class="block" margin-top>
+  <div class="block">
     <div class="card-background-page" (click)="viewAllCoffie()">
         <ion-card>
           <img src="assets/img/coffie.jpg"/>
@@ -70,12 +70,12 @@
       </ion-card> 
     </div>
 
-    <div class="block-title" padding-left padding-right>
+    <div class="block-title" padding-left padding-right style="margin-top: 7px">
       <div class="pull-left">
         <ion-icon name="color-fill" color="restaurant-color"></ion-icon>
         <span color="restaurant-color"><strong>커피여행 추천</strong></span>
       </div>
-      <div class="pull-right">
+      <div class="pull-right" style="margin-top: 3px">
         <span color="restaurant-color" (click)="viewAllCoffie()">더 보기 &gt;</span>
       </div>
       <div class="clear"></div>
@@ -106,7 +106,7 @@
 2. 폰트 색상 지정
 3. 이미지 및 폰트 정렬
 -->
-  <div class="block" margin-top>
+  <div class="block">
       <div class="card-background-page"  (click)="viewAllHotels()">
         <ion-card>
           <img src="assets/img/sachun.jpg"/>
@@ -117,12 +117,12 @@
               <div class="clear"></div>
       </div>
     </div>
-    <div class="block-title" padding-left padding-right>
+    <div class="block-title" padding-left padding-right style="margin-top: 7px">
       <div class="pull-left">
         <ion-icon name="bus" color="hotel-color"></ion-icon>
         <span color="hotel-color"><strong>사천로드 추천</strong></span>
       </div>
-      <div class="pull-right">
+      <div class="pull-right" style="margin-top: 3px">
         <span color="hotel-color" (click)="viewAllHotels()">더 보기 &gt;</span>
       </div>
       <div class="clear"></div>
@@ -153,7 +153,7 @@
 2. 폰트 색상 지정
 3. 이미지 및 폰트 정렬
 -->
-    <div class="block" margin-top>
+    <div class="block">
       <div class="card-background-page"  (click)="viewAllAttractions()">
         <ion-card>
           <img src="assets/img/bicycle.jpg"/>
@@ -164,12 +164,12 @@
               <div class="clear"></div>
       </div>
     </div>
-    <div class="block-title" padding-left padding-right>
+    <div class="block-title" padding-left padding-right style="margin-top: 7px">
       <div class="pull-left">
         <ion-icon name="bicycle" color="attraction-color"></ion-icon>
         <span color="attraction-color"><strong>자전거여행 추천</strong></span>
       </div>
-      <div class="pull-right">
+      <div class="pull-right" style="margin-top: 3px">
         <span color="attraction-color" (click)="viewAllAttractions()">더 보기 &gt;</span>
       </div>
       <div class="clear"></div>
@@ -196,7 +196,7 @@
 
     <!-- 해외여행
   -->
-  <div class="block" margin-top>
+  <div class="block">
     <div class="card-background-page" (click)="viewAllOversea()">
         <ion-card>
           <img src="assets/img/oversea.jpg"/>
@@ -205,12 +205,12 @@
       </ion-card> 
     </div>
 
-    <div class="block-title" padding-left padding-right>
+    <div class="block-title" padding-left padding-right style="margin-top: 7px">
       <div class="pull-left">
         <ion-icon name="jet" color="restaurant-color"></ion-icon>
         <span color="restaurant-color"><strong>해외여행 추천</strong></span>
       </div>
-      <div class="pull-right">
+      <div class="pull-right" style="margin-top: 3px">
         <span color="restaurant-color" (click)="viewAllOversea()">더 보기 &gt;</span>
       </div>
       <div class="clear"></div>
@@ -237,7 +237,7 @@
 
   <!-- 레저
 -->
-  <div class="block" margin-top>
+  <div class="block">
       <div class="card-background-page"  (click)="viewAllCoffie()">
         <ion-card>
           <img src="assets/img/activity.jpg"/>
@@ -248,12 +248,12 @@
               <div class="clear"></div>
       </div>
     </div>
-    <div class="block-title" padding-left padding-right>
+    <div class="block-title" padding-left padding-right style="margin-top: 7px">
       <div class="pull-left">
         <ion-icon name="boat" color="hotel-color"></ion-icon>
         <span color="hotel-color"><strong>레저여행 추천</strong></span>
       </div>
-      <div class="pull-right">
+      <div class="pull-right" style="margin-top: 3px">
         <span color="hotel-color" (click)="viewAllCoffie()">더 보기 &gt;</span>
       </div>
       <div class="clear"></div>
@@ -280,7 +280,7 @@
 
 <!-- 힐링
 -->
-    <div class="block" margin-top>
+    <div class="block">
       <div class="card-background-page"  (click)="viewAllCoffie()">
         <ion-card>
           <img src="assets/img/healing.jpg"/>
@@ -291,12 +291,12 @@
               <div class="clear"></div>
       </div>
     </div>
-    <div class="block-title" padding-left padding-right>
+    <div class="block-title" padding-left padding-right style="margin-top: 7px">
       <div class="pull-left">
         <ion-icon name="leaf" color="attraction-color"></ion-icon>
         <span color="attraction-color"><strong>힐링여행 추천</strong></span>
       </div>
-      <div class="pull-right">
+      <div class="pull-right" style="margin-top: 3px">
         <span color="attraction-color" (click)="viewAllCoffie()">더 보기 &gt;</span>
       </div>
       <div class="clear"></div>
@@ -314,88 +314,6 @@
           </div>
           <span color="gray">￦ 57,000</span>
           <div>
-            <div class="clear"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-  <div class="block">
-    <div class="block-title" padding-left padding-right>
-      <div class="pull-left">
-        <ion-icon name="home" color="hotel-color"></ion-icon>
-        <span color="hotel-color">HOTELS</span>
-      </div>
-      <div class="pull-right">
-        <span color="hotel-color" (click)="viewAllHotels()">SEE ALL &gt;</span>
-      </div>
-      <div class="clear"></div>
-    </div>
-    <div class="items" padding-left padding-bottom>
-      <div class="card round" *ngFor="let hotel of hotels" (click)="viewHotel(hotel.id)">
-        <div class="card-header" [ngStyle]="{'background-image': 'url(' + hotel.thumb + ')'}"></div>
-        <div class="padding-xs">
-          <h5>{{ hotel.name }}</h5>
-          <div class="rating">
-            <ion-icon name="md-star" color="restaurant-color" *ngFor="let star of range(hotel.rating)"></ion-icon>
-            <ion-icon name="md-star" color="gray" *ngFor="let star of range(5 - hotel.rating)"></ion-icon>
-            <span color="gray">{{ hotel.reviews.length }} reviews</span>
-          </div>
-          <span color="gray">Recommended for:</span>
-          <div>
-            <div class="pull-left">
-              <span color="restaurant-color">{{ hotel.scores[0].name }},</span>
-              <span color="restaurant-color">{{ hotel.scores[1].name }}</span>
-            </div>
-            <div class="pull-right">
-              {{ hotel.location.distance }} km
-            </div>
-            <div class="clear"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!--list of hotels-->
-  <div class="block">
-    <div class="block-title" padding-left padding-right>
-      <div class="pull-left">
-        <ion-icon name="bicycle" color="attraction-color"></ion-icon>
-        <span color="attraction-color">THINGS TO DO</span>
-      </div>
-      <div class="pull-right">
-        <span color="attraction-color" (click)="viewAllAttractions()">SEE ALL &gt;</span>
-      </div>
-      <div class="clear"></div>
-    </div>
-    <div class="items" padding-left padding-bottom>
-      <div class="card round" *ngFor="let attraction of attractions" (click)="viewAttraction(attraction.id)">
-        <div class="card-header" [ngStyle]="{'background-image': 'url(' + attraction.thumb + ')'}"></div>
-        <div class="padding-xs">
-          <h5>{{ attraction.name }}</h5>
-          <div class="rating">
-            <ion-icon name="md-star" color="restaurant-color" *ngFor="let star of range(attraction.rating)"></ion-icon>
-            <ion-icon name="md-star" color="gray" *ngFor="let star of range(5 - attraction.rating)"></ion-icon>
-            <span color="gray">{{ attraction.reviews.length }} reviews</span>
-          </div>
-          <span color="gray">Recommended for:</span>
-          <div>
-            <div class="pull-left">
-              <span color="restaurant-color">{{ attraction.scores[0].name }},</span>
-              <span color="restaurant-color">{{ attraction.scores[1].name }}</span>
-            </div>
-            <div class="pull-right">
-              {{ attraction.location.distance }} km
-            </div>
             <div class="clear"></div>
           </div>
         </div>

@@ -1,5 +1,10 @@
 import {Component} from "@angular/core";
 import {NavController} from "ionic-angular";
+import { PhotoViewer } from 'ionic-native';
+import { showdown } from 'showdown';
+//import * as $ from 'showdown';
+
+//declare var showdown: any;
 
 /*
   Generated class for the Test page.
@@ -12,13 +17,17 @@ import {NavController} from "ionic-angular";
   templateUrl: 'test.html'
 })
 export class TestPage {
+  shaObj: any;
   constructor(public nav: NavController) {
+    PhotoViewer.show('https://hybapps.com/themes_market/files/large/9ba05622a9d0c46a158965b7cb9357aa.png');
+           
+           //var converter = new showdown.Converter();
   }
 
   slides = [
     {
       title: "Welcome to the Docs!",
-      description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
+      description: "this.content",
       image: "assets/img/home_header.jpg",
     },
     {

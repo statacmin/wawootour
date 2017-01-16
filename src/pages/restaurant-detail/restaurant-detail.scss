@@ -1,5 +1,9 @@
 page-restaurant-detail,
 .restaurant-detail {
+  .nanum{
+  	font-family: "나눔고딕";
+  }
+  
   // import extends css
   $color-bar: color($colors, restaurant-color);
   @import "../../theme/circle_progress";
