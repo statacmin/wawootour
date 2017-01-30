@@ -1,0 +1,184 @@
+<!--
+  Generated template for the HealingDetail page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="nanum">
+  <ion-navbar class="nav-transparent no-border" color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class=" item-detail nanum">
+  <!--header info-->
+  <div class="item-header" [ngStyle]="{'background-image': 'url(' + healing.thumb + ')'}">
+    <div class="inner">
+      <div class="align-bottom" padding>
+        <h2 color="white">{{ healing.name }}</h2>
+        <div>
+          <ion-icon name="md-star" color="white" *ngFor="let star of range(healing.rating)"></ion-icon>
+          <ion-icon name="md-star" color="gray" *ngFor="let star of range(5 - healing.rating)"></ion-icon>
+          <span color="white"> 후기 {{ healing.reviews.length }}</span>
+        </div>
+        <div>
+          <span color="white"> 1인 </span>
+          <span color="white">{{ healing.cost }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--buttons-->
+  <ion-grid class="buttons border-bottom">
+    <ion-row>
+      <ion-col text-center>
+        <ion-icon name="ios-camera-outline" color="gray"></ion-icon>
+        <span color="gray">여행 사진</span>
+      </ion-col>
+      <ion-col text-center>
+        <ion-icon name="ios-heart-outline" color="gray"></ion-icon>
+        <span color="gray">위시리스트</span>
+      </ion-col>
+      <ion-col text-center>
+        <ion-icon name="ios-list-box-outline" color="gray"></ion-icon>
+        <span color="gray">관련상품</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!--rating-->
+  <div class="border-bottom" text-center padding>
+    <span class="bold" color="gray">평가하기</span>
+    <div class="rating-form">
+      <ion-icon name="ios-star" color="hotel-color" *ngFor="let star of range(rating); let i = index"
+                (click)="rate(i + 1)"></ion-icon>
+      <ion-icon name="ios-star-outline" color="hotel-color" *ngFor="let star of range(5 - rating); let i = index"
+                (click)="rate(i + rating + 1)"></ion-icon>
+    </div>
+  </div>
+
+  <!--scores-->
+  <ion-grid class="border-bottom">
+    <ion-row>
+      <ion-col text-center *ngFor="let score of healing.scores; let i=index" [hidden]="i > 3">
+        <div class="progress-container p-{{ score.score }}">
+          <div class="info">
+            <span class="text-1x5">{{ score.score }}</span><span class="text-sm">%</span>
+          </div>
+        </div>
+
+        <span>{{ score.name }}</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="block" margin-top>
+    <div style="padding-left: 16px">여행 사진</div>
+    <div class="card-background-page">
+        <ion-card>
+          <img src="assets/img/healing/thumb/img_1.jpg"/>
+      </ion-card> 
+    </div>
+    <div align="center" style="margin-top: 5px">
+        <ion-img width="32%" height="80" src="assets/img/healing/thumb/img_2.jpg"></ion-img>
+        <ion-img width="32%" height="80" src="assets/img/healing/thumb/img_3.jpg"></ion-img>
+        <ion-img width="32%" height="80" src="assets/img/healing/thumb/img_4.jpg"></ion-img>
+    </div>
+  </div>
+  <div padding>여행 소개</div>
+  <div class="border-bottom" style="padding: 0px 16px 16px 16px">
+      와우투어를 통해 강릉을 대표하는 커피 명소 및 장인을 만나보세요!<br>
+      박이추 선생님께 직접 배우는 로스트 강습부터 산토리니, 테라로사와 같은 유명한 커피숍에서 커피를 음미하실 수 있습니다.
+  </div>
+  <div class="border-bottom" padding>코스 소개
+    <div padding>
+      <ion-icon style="margin-right: 10px" color="attraction-color" name="ios-alarm-outline"></ion-icon>  
+      <span color="gray">만나는 시간: 오전 7시 30분</span>
+    </div>
+    <div padding>
+      <ion-icon style="margin-right: 10px" color="attraction-color" name="ios-pin-outline"></ion-icon>  
+      <span color="gray">만나는 장소: 숙소에서 픽업해드립니다.</span>
+      <!-- Show map here -->
+      <div id="map-detail"></div>
+    </div>
+    <div padding>
+      <ion-icon style="margin-right: 10px" color="attraction-color" name="ios-flag-outline"></ion-icon>  
+      <span color="gray">바다가 보이는 최고급 풀빌라</span>
+      <div>
+      <ion-img width="311px" height="200px" src="assets/img/overseas/thumb/img_2.jpg"></ion-img>
+      </div>
+    </div>
+    <div padding>
+      <ion-icon style="margin-right: 10px" color="attraction-color" name="ios-flag-outline"></ion-icon>  
+      <span color="gray">알카자쇼 관람</span>
+      <div>
+      <ion-img width="311px" height="200px" src="assets/img/overseas/thumb/img_3.jpg"></ion-img>
+      </div>
+    </div>
+  </div>
+  
+  <!--Info-->
+  <div padding>가격표</div>
+  <div class="border-bottom" padding>
+      <ion-img width="100%" height="75px" src="assets/img/pricing.png"></ion-img>
+  </div>
+
+  <!--Reviews-->
+  <div class="border-bottom" padding>
+    <span color="gray">사용자 후기</span>
+    <ion-grid>
+      <ion-row>
+        <ion-col width-33 class="middle-align">
+          <span class="rating-value" color="hotel-color">
+            {{ healing.rating }}
+          </span>
+        </ion-col>
+        <ion-col width-66>
+          <div *ngFor="let value of ratingValues; let i = index">
+            {{ i + 1 }}
+            <ion-icon name="star" color="gray"></ion-icon>
+            <span class="progress-bar hotel-bg" [ngStyle]="{'width': value + 'rem'}"
+                  color="hotel-color"></span>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!--list of reviews-->
+  <ion-list margin-top class="list-full-border reviews">
+    <div *ngFor="let review of healing.reviews">
+      <ion-item text-wrap>
+        <ion-avatar item-left>
+          <img src="{{ review.avatar }}">
+        </ion-avatar>
+        <div class="author">
+          <span>{{ review.username }}</span>
+          <span color="gray">{{ review.from }}</span>
+        </div>
+        <div class="text-sm">
+          <ion-icon name="md-star" color="hotel-color" *ngFor="let start of range(review.rating)"></ion-icon>
+        </div>
+        <div>
+          <span color="gray">{{ review.content }}</span>
+        </div>
+        <!--
+        <div>Recommended for:</div>
+        <div>
+        <span *ngFor="let score of restaurant.scores">
+          <span color="restaurant-color" *ngIf="score.id == review.recommended_for[0]">{{ score.name }},</span>
+        </span>
+          <span *ngFor="let score of restaurant.scores">
+          <span color="restaurant-color" *ngIf="score.id == review.recommended_for[1]">{{ score.name }}</span>
+        </span>
+        </div>
+        -->
+      </ion-item>
+    </div>
+  </ion-list>
+
+</ion-content>
