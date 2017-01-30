@@ -5,7 +5,7 @@
   Ionic pages and navigation.
 -->
 <ion-header  class="nanum">
-  <ion-navbar color="restaurant-color">
+  <ion-navbar color="attraction-color">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -19,15 +19,15 @@
     <div class="padding-xs">
       <h5>{{ restaurant.name }}</h5>
       <div class="rating">
-        <ion-icon name="md-star" color="restaurant-color" *ngFor="let star of range(restaurant.rating)"></ion-icon>
+        <ion-icon name="md-star" color="attraction-color" *ngFor="let star of range(restaurant.rating)"></ion-icon>
         <ion-icon name="md-star" color="gray" *ngFor="let star of range(5 - restaurant.rating)"></ion-icon>
         <span color="gray"> 후기 {{ restaurant.reviews.length }} </span>
       </div>
       <span color="gray" style="font-weight: bold">{{restaurant.class}}</span>
       <div>
         <div class="pull-left">
-          <span color="restaurant-color">{{ restaurant.scores[0].name }},</span>
-          <span color="restaurant-color">{{ restaurant.scores[1].name }}</span>
+          <span color="attraction-color">{{ restaurant.scores[0].name }},</span>
+          <span color="attraction-color">{{ restaurant.scores[1].name }}</span>
         </div>
         <div class="pull-right">
           <span color="gray"> 1인 </span>

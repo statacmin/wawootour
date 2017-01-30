@@ -54,9 +54,9 @@
   <div class="border-bottom" text-center padding>
     <span class="bold" color="gray">평가하기</span>
     <div class="rating-form">
-      <ion-icon name="ios-star" color="restaurant-color" *ngFor="let star of range(rating); let i = index"
+      <ion-icon name="ios-star" color="attraction-color" *ngFor="let star of range(rating); let i = index"
                 (click)="rate(i + 1)"></ion-icon>
-      <ion-icon name="ios-star-outline" color="restaurant-color" *ngFor="let star of range(5 - rating); let i = index"
+      <ion-icon name="ios-star-outline" color="attraction-color" *ngFor="let star of range(5 - rating); let i = index"
                 (click)="rate(i + rating + 1)"></ion-icon>
     </div>
   </div>
@@ -133,7 +133,7 @@
     <ion-grid>
       <ion-row>
         <ion-col width-33 class="middle-align">
-          <span class="rating-value" color="restaurant-color">
+          <span class="rating-value" color="attraction-color">
             {{ restaurant.rating }}
           </span>
         </ion-col>
@@ -141,8 +141,8 @@
           <div *ngFor="let value of ratingValues; let i = index">
             {{ i + 1 }}
             <ion-icon name="star" color="gray"></ion-icon>
-            <span class="progress-bar restaurant-bg" [ngStyle]="{'width': value + 'rem'}"
-                  color="restaurant-color"></span>
+            <span class="progress-bar attraction-bg" [ngStyle]="{'width': value + 'rem'}"
+                  color="attraction-color"></span>
           </div>
         </ion-col>
       </ion-row>
@@ -161,7 +161,7 @@
           <span color="gray">{{ review.from }}</span>
         </div>
         <div class="text-sm">
-          <ion-icon name="md-star" color="restaurant-color" *ngFor="let start of range(review.rating)"></ion-icon>
+          <ion-icon name="md-star" color="attraction-color" *ngFor="let start of range(review.rating)"></ion-icon>
         </div>
         <div>
           <span color="gray">{{ review.content }}</span>

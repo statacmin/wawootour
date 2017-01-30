@@ -13,6 +13,12 @@ import {AttractionsPage} from "../attractions/attractions";
 import {OverseasPage}  from "../overseas/overseas";
 import {OverseasService} from "../../services/overseas-service";
 import { OverseasDetailPage } from '../overseas-detail/overseas-detail';
+import {LeisurePage}  from "../leisure/leisure";
+import {LeisureService} from "../../services/leisure-service";
+import { LeisureDetailPage } from '../leisure-detail/leisure-detail';
+import {HealingPage}  from "../healing/healing";
+import {HealingService} from "../../services/healing-service";
+import { HealingDetailPage } from '../healing-detail/healing-detail';
 
 /*
  Generated class for the LoginPage page.
@@ -33,15 +39,21 @@ export class HomePage {
   public attractions: any;
   // overseas
   public overseas: any;
+  //leisures
+  public leisures: any;
+  //healing
+  public healings: any;
 
   constructor(public app: App, public nav: NavController, public gatewayService: GatewayService,
               public hotelService: HotelService, public restaurantService: RestaurantService,
-              public attractionService: AttractionService, public overseasService: OverseasService) {
+              public attractionService: AttractionService, public overseasService: OverseasService, public leisureService: LeisureService, public healingService: HealingService) {
     // set sample data
     this.restaurants = restaurantService.getAll();
     this.hotels = hotelService.getAll();
     this.attractions = attractionService.getAll();
     this.overseas = overseasService.getAll();
+    this.leisures = leisureService.getAll();
+    this.healings = healingService.getAll();
   }
 
    slides = [
@@ -80,10 +92,6 @@ export class HomePage {
     this.app.getRootNav().push(AttractionDetailPage, {id: id})
   }
 
-  //해외여행 상세
-  viewOversea(id) {
-    this.app.getRootNav().push(OverseasDetailPage, {id: id})
-  }
 
   // view all coffie
   viewAllCoffie() {
@@ -103,6 +111,31 @@ export class HomePage {
   // view all oversea
   viewAllOversea() {
     this.app.getRootNav().push(OverseasPage);
+  }
+
+  //해외여행 상세
+  viewOversea(id) {
+    this.app.getRootNav().push(OverseasDetailPage, {id: id})
+  }
+
+  // 레저 리스트
+  viewAllLeisure() {
+    this.app.getRootNav().push(LeisurePage);
+  }
+  
+  //레저 상세
+  viewLeisure(id) {
+    this.app.getRootNav().push(LeisureDetailPage, {id: id})
+  }
+
+  // 힐링 리스트
+  viewAllHealing() {
+    this.app.getRootNav().push(HealingPage);
+  }
+  
+  //힐링 상세
+  viewHealing(id) {
+    this.app.getRootNav().push(HealingDetailPage, {id: id})
   }
 
   // 메인 슬라이드 클릭시 해당 이벤트 페이지로 이동

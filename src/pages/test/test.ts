@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 import {NavController} from "ionic-angular";
 import { PhotoViewer } from 'ionic-native';
-import { showdown } from 'showdown';
+//import { showdown } from 'showdown';
 //import * as $ from 'showdown';
 
 //declare var showdown: any;

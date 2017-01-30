@@ -5,6 +5,9 @@ page-restaurant-detail,
   }
   
   // import extends css
-  $color-bar: color($colors, restaurant-color);
+  $color-bar: color($colors, attraction-color);
   @import "../../theme/circle_progress";
 }
+
+
+.icon-md-attraction-color{margin-bottom:27px;}

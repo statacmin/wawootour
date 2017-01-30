@@ -1,10 +1,17 @@
 page-home,
 .home {
+   #header-top{position:fixed; z-index:99; width:100%;margin-top:20px;}
+   #header-top .logo{width:145px; margin-left:auto; margin-right:auto;}
+   #header-top .heart{position:absolute;right:15px;width:38px;}
 
   .scroll-content {
     padding-bottom: 5rem;
+    margin-top:0px;
   }
   
+
+  .btn-menu{position:absolute;top:15px;left:15px;}
+
   .nanum{
     font-family: "나눔고딕";
   }
@@ -12,6 +19,7 @@ page-home,
   .product-left{
     float: left;
     padding-left: 10px;
+    width:93%;
   }
 
   .product-right{
@@ -25,7 +33,11 @@ page-home,
   ion-card {
     position: relative;
     text-align: center;
+    background:#000;
   }
+
+  ion-card img{opacity: 0.8;}
+
 
   .card-title {
     position: absolute;
@@ -88,7 +100,7 @@ page-home,
   }
 
 .swiper-pagination-bullet {
-  background: #F6F6F6;
+  background: red;
 }
 
   // list of items

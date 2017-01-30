@@ -12,6 +12,8 @@ import {ActivityService} from '../services/activity-service';
 import {AttractionService} from '../services/attraction-service';
 import {OverseasService} from '../services/overseas-service';
 import {ContactService} from '../services/contact-service';
+import {LeisureService} from '../services/leisure-service';
+import {HealingService} from '../services/healing-service';
 // end import services
 // end import services
 
@@ -37,7 +39,9 @@ import { TestPage } from '../pages/test/test';
 import { OverseasPage } from '../pages/overseas/overseas';
 import { OverseasDetailPage } from '../pages/overseas-detail/overseas-detail';
 import { LeisurePage } from '../pages/leisure/leisure';
+import { LeisureDetailPage } from '../pages/leisure-detail/leisure-detail';
 import { HealingPage } from '../pages/healing/healing';
+import { HealingDetailPage } from '../pages/healing-detail/healing-detail';
 // end import pages
 
 @NgModule({
@@ -64,7 +68,9 @@ import { HealingPage } from '../pages/healing/healing';
     OverseasPage,
     OverseasDetailPage,
     LeisurePage,
-    HealingPage
+    LeisureDetailPage,
+    HealingPage,
+    HealingDetailPage
 ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -93,7 +99,9 @@ import { HealingPage } from '../pages/healing/healing';
     OverseasPage,
     OverseasDetailPage,
     LeisurePage,
-    HealingPage
+    LeisureDetailPage,
+    HealingPage,
+    HealingDetailPage
 ],
   providers: [
     FoodCategoryService,
@@ -104,7 +112,9 @@ import { HealingPage } from '../pages/healing/healing';
     ActivityService,
     AttractionService,
     OverseasService,
-    ContactService
+    ContactService,
+    LeisureService,
+    HealingService
     /* import services */
 ]
 })
