@@ -1,6 +1,13 @@
 page-attraction-detail,
 .attraction-detail {
+.nanum{
+  	font-family: "나눔고딕";
+  }
+  
   // import extends css
   $color-bar: color($colors, attraction-color);
   @import "../../theme/circle_progress";
 }
+
+
+.icon-md-attraction-color{margin-bottom:27px;}
