@@ -1,31 +1,20 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Slides</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content class="tutorial-page">
-
-  <ion-slides pager>
-    <ion-slide *ngFor="let slide of slides">
-      <ion-toolbar>
-        <ion-buttons end>
-          <button ion-button color="primary">Skip</button>
-        </ion-buttons>
-      </ion-toolbar>
-      <img [src]="slide.image" class="slide-image"/>
-      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
-      <p [innerHTML]="slide.description"></p>
-    </ion-slide>
-    <ion-slide>
-      <ion-toolbar>
-      </ion-toolbar>
-      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>
-      <h2 class="slide-title">Ready to Play?</h2>
-      <button ion-button large clear icon-right color="primary">
-        Continue
-        <ion-icon name="arrow-forward"></ion-icon>
+<ion-header class="nanum">
+  <ion-toolbar >
+    <ion-title >
+      여행사진
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">취소</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
       </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="tutorial-page">
+  <ion-slides (ionSlideDidChange)="slideChanged()"  style="background-color: black;">
+    <ion-slide *ngFor="let slide of slides1">
+      <img [src]="slide.image" class="slide-image"/>
     </ion-slide>
   </ion-slides>
 </ion-content>

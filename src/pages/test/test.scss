@@ -1,12 +1,14 @@
 .tutorial-page {
 
+
   .toolbar-background {
     background: #fff;
     border-color: transparent;
   }
 
   .slide-zoom {
-    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
   }
 
   .slide-title {
@@ -14,9 +16,8 @@
   }
 
   .slide-image {
-    max-height: 50%;
-    max-width: 60%;
-    margin: 18px 0;
+    max-height: 100%;
+    max-width: 100%;
   }
 
   b {
@@ -33,5 +34,9 @@
       color: #000000;
     }
   }
-
 }
+
+  
+    .nanum{
+    font-family: "나눔고딕";
+  }

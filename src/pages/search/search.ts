@@ -106,13 +106,15 @@ export class SearchPage {
     this.showFullMap = false;
 
     if (searchBy == 1) {
-      this.items = this.restaurantService.getAll();
+      this.items = this.attractionService.getAll();
     } else if (searchBy == 2) {
       this.items = this.hotelService.getAll();
     } else {
-      this.items = this.attractionService.getAll();
+      this.items = this.restaurantService.getAll();
+      
     }
 
+    this.searchBy=searchBy;
     this.clearMarkers();
     this.setMarkers();
     this.resizeMap();
@@ -156,11 +158,11 @@ export class SearchPage {
 
     // search by restaurant
     if (this.searchBy == 1) {
-      this.app.getRootNav().push(RestaurantDetailPage, {id: id})
+      this.app.getRootNav().push(AttractionDetailPage, {id: id})
     } else if (this.searchBy == 2) { // search by hotel
       this.app.getRootNav().push(HotelDetailPage, {id: id})
     } else { // search by attraction
-      this.app.getRootNav().push(AttractionDetailPage, {id: id})
+      this.app.getRootNav().push(RestaurantDetailPage, {id: id})
     }
   }
 }

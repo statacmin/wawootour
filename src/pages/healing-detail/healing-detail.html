@@ -78,12 +78,12 @@
 
   <div class="block" margin-top>
     <div style="padding-left: 16px">여행 사진</div>
-    <div class="card-background-page">
+    <div class="card-background-page" (click)="presentModal()">
         <ion-card>
           <img src="assets/img/healing/thumb/img_1.jpg"/>
       </ion-card> 
     </div>
-    <div align="center" style="margin-top: 5px">
+    <div align="center" style="margin-top: 5px" (click)="presentModal()">
         <ion-img width="32%" height="80" src="assets/img/healing/thumb/img_2.jpg"></ion-img>
         <ion-img width="32%" height="80" src="assets/img/healing/thumb/img_3.jpg"></ion-img>
         <ion-img width="32%" height="80" src="assets/img/healing/thumb/img_4.jpg"></ion-img>

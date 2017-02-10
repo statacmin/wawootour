@@ -27,8 +27,8 @@ export let HEALING = [
       },
       {
         id: 4,
-        name: "비즈니스 여행",
-        score: 64
+        name: "가족 여행",
+        score: 59
       },
       {
         id: 5,
@@ -100,7 +100,7 @@ export let HEALING = [
       },
       {
         id: 4,
-        name: "비즈니스 여행",
+        name: "가족 여행",
         score: 40
       },
       {
@@ -173,7 +173,7 @@ export let HEALING = [
       },
       {
         id: 4,
-        name: "비즈니스 여행",
+        name: "가족 여행",
         score: 64
       },
       {
@@ -220,7 +220,7 @@ export let HEALING = [
   },
   {
     id: 4,
-    name: "[나를 위한 시간여행] 템플스테이",
+    name: "[한옥 체험] 강릉 선교장",
     cost: "￦37,000",
     class: "가이드투어",
     location: {
@@ -246,7 +246,7 @@ export let HEALING = [
       },
       {
         id: 4,
-        name: "비즈니스 여행",
+        name: "가족 여행",
         score: 40
       },
       {

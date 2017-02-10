@@ -78,21 +78,27 @@
 
   <div class="block" margin-top>
     <div style="padding-left: 16px">여행 사진</div>
-    <div class="card-background-page">
+    <div class="card-background-page" (click)="presentModal()">
         <ion-card>
           <img src="assets/img/restaurant/thumb/img_1.jpg"/>
       </ion-card> 
     </div>
-    <div align="center" style="margin-top: 5px">
-        <ion-img width="32%" height="80" src="assets/img/restaurant/thumb/img_2.jpg"></ion-img>
-        <ion-img width="32%" height="80" src="assets/img/restaurant/thumb/img_3.jpg"></ion-img>
-        <ion-img width="32%" height="80" src="assets/img/restaurant/thumb/img_6.jpg"></ion-img>
+    <div align="center" style="margin-top: 5px" (click)="presentModal()">
+        <ion-img width="32%" height="80" src="assets/img/restaurant/thumb/img_8.jpg"></ion-img>
+        <ion-img width="32%" height="80" src="assets/img/restaurant/thumb/img_9.jpg"></ion-img>
+        <ion-img width="32%" height="80" src="assets/img/restaurant/thumb/img_10.jpg"></ion-img>
     </div>
   </div>
   <div padding>여행 소개</div>
   <div class="border-bottom" style="padding: 0px 16px 16px 16px">
-      와우투어를 통해 강릉을 대표하는 커피 명소 및 장인을 만나보세요!<br>
-      박이추 선생님께 직접 배우는 로스트 강습부터 산토리니, 테라로사와 같은 유명한 커피숍에서 커피를 음미하실 수 있습니다.
+      커피커퍼 커피박물관은 전 세계의 다양하고 진귀한 커피유물을 전시하여 세계 각국의 독특한 커피의 역사와 문화를 전합니다.<br> 단순히 마시는 음료의 범주를 넘어 우리 생활 속 기호식품으로 자리한 커피를 제대로 이해하고, 소통하고, 체험하는 공간입니다.<br> 커피유물 전시와 커피나무 재배에서부터 한 잔의 커피가 탄생하기까지의 모든 과정을 직접 경험하는 곳입니다.<br> 
+      커피전문교육을 통하여 지역사회의 커피문화 확산에 기여하고, 각국의 커피박물관과의 우호협력 관계로 세계 커피문화를 선도하는 커피전문박물관입니다.
+      <br><br>
+      *투어 시 처음부터 끝까지 다니면서 안내해드립니다.<br>
+      *바리스타에게 로스팅 및 정통 핸드드립을 배우실 수 있는 시간을 드립니다.<br>
+      *시내투어는 자유관광 형식으로 진행되며, 별도 문의해주시면 숙박 및 맛집 할인권 구매 안내드립니다.<br>
+      *다섯분 이상은 별도로 문의해주시면 됩니다.<br>
+      *직접 로스팅한 원두구매 가능하며, 로스팅체험 및 핸드드립 커피 중 선택 체험 가능합니다.<br>
   </div>
   <div class="border-bottom" padding>코스 소개
     <div padding>
@@ -101,22 +107,22 @@
     </div>
     <div padding>
       <ion-icon style="margin-right: 10px" color="attraction-color" name="ios-pin-outline"></ion-icon>  
-      <span color="gray">만나는 장소: 숙소에서 픽업해드립니다.</span>
+      <span color="gray">만나는 장소: 강릉 고속 버스터미널</span>
       <!-- Show map here -->
       <div id="map-detail"></div>
     </div>
     <div padding>
       <ion-icon style="margin-right: 10px" color="attraction-color" name="ios-flag-outline"></ion-icon>  
-      <span color="gray">바다가 보이는 최고급 풀빌라</span>
+      <span color="gray">로스팅 체험</span>
       <div>
-      <ion-img width="311px" height="200px" src="assets/img/overseas/thumb/img_2.jpg"></ion-img>
+      <ion-img width="311px" height="200px" src="assets/img/restaurant/thumb/img_11.jpg"></ion-img>
       </div>
     </div>
     <div padding>
       <ion-icon style="margin-right: 10px" color="attraction-color" name="ios-flag-outline"></ion-icon>  
-      <span color="gray">알카자쇼 관람</span>
+      <span color="gray">박물관 관람</span>
       <div>
-      <ion-img width="311px" height="200px" src="assets/img/overseas/thumb/img_3.jpg"></ion-img>
+      <ion-img width="311px" height="200px" src="assets/img/restaurant/thumb/img_12.jpg"></ion-img>
       </div>
     </div>
   </div>

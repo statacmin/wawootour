@@ -1,6 +1,8 @@
 import {Component} from "@angular/core";
-import {NavController} from "ionic-angular";
-import { PhotoViewer } from 'ionic-native';
+import {NavController, ViewController, NavParams} from "ionic-angular";
+import { ViewChild } from '@angular/core';
+import { Slides } from 'ionic-angular';
+
 //import { showdown } from 'showdown';
 //import * as $ from 'showdown';
 
@@ -14,32 +16,41 @@ import { PhotoViewer } from 'ionic-native';
 */
 @Component({
   selector: 'page-test',
-  templateUrl: 'test.html'
+  templateUrl: 'test.html',
 })
+
 export class TestPage {
-  shaObj: any;
-  constructor(public nav: NavController) {
-    PhotoViewer.show('https://hybapps.com/themes_market/files/large/9ba05622a9d0c46a158965b7cb9357aa.png');
-           
-           //var converter = new showdown.Converter();
+  public slides1 = [];
+  @ViewChild(Slides) slides: Slides;
+
+  constructor(public nav: NavController, public viewCtrl: ViewController, private navParams: NavParams) {
+    let id = navParams.get('id');
+
+    this.slides1 = [
+      {
+       image: "assets/img/"+id+"/thumb/img_1.jpg",
+
+      },
+      {
+        image: "assets/img/"+id+"/thumb/img_2.jpg",
+      },
+      {
+        image: "assets/img/"+id+"/thumb/img_3.jpg",
+      },
+      {
+        image: "assets/img/"+id+"/thumb/img_4.jpg",
+      }
+    ];
   }
 
-  slides = [
-    {
-      title: "Welcome to the Docs!",
-      description: "this.content",
-      image: "assets/img/home_header.jpg",
-    },
-    {
-      title: "What is Ionic?",
-      description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
-      image: "assets/img/home_header.jpg",
-    },
-    {
-      title: "What is Ionic Cloud?",
-      description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-      image: "assets/img/home_header.jpg",
-    }
-  ];
+  dismiss() {
+    this.viewCtrl.dismiss();
+  }
+
+  slideChanged() {
+   let currentIndex = this.slides.getActiveIndex();
+    console.log("Current index is", currentIndex);
+    alert(currentIndex);
+  }
 }
 

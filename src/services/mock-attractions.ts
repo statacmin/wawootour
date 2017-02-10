@@ -27,7 +27,7 @@ export let ATTRACTIONS = [
       },
       {
         id: 4,
-        name: "비즈니스 여행",
+        name: "가족 여행",
         score: 64
       },
       {
@@ -74,7 +74,7 @@ export let ATTRACTIONS = [
   },
   {
     id: 2,
-    name: "대관령 국제 힐클라임 대회",
+    name: "대관령 국제 힐클라임 대회 코스",
     cost: "￦99,000",
     class: "가이드투어",
     location: {
@@ -100,7 +100,7 @@ export let ATTRACTIONS = [
       },
       {
         id: 4,
-        name: "비즈니스 여행",
+        name: "가족 여행",
         score: 40
       },
       {
@@ -173,7 +173,7 @@ export let ATTRACTIONS = [
       },
       {
         id: 4,
-        name: "비즈니스 여행",
+        name: "가족 여행",
         score: 64
       },
       {
@@ -246,7 +246,7 @@ export let ATTRACTIONS = [
       },
       {
         id: 4,
-        name: "비즈니스 여행",
+        name: "가족 여행",
         score: 40
       },
       {

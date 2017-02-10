@@ -10,7 +10,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu" color="primary"></ion-icon>
     </button>
-    <ion-title>Activity</ion-title>
+    <ion-title>여행소식</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -55,7 +55,6 @@
         {{ activity.content }}
       </div>
 
-      <span color="gray">Recommended for:</span>
       <div class="recommends">
         <span *ngFor="let item of activity.recommended_for" color="primary">{{ item.name }}</span>
       </div>

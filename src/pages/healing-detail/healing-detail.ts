@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import {NavController, Platform} from "ionic-angular";
 import {HealingService} from "../../services/healing-service";
 import { NavParams } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
+import { TestPage } from '../test/test';
 
 declare var google: any;
 
@@ -25,7 +27,7 @@ export class HealingDetailPage {
   // rating values
   public ratingValues = [0, 0, 0, 0, 0];
 
-  constructor(public nav: NavController, public healingService: HealingService, public platform: Platform, private navParams: NavParams) {
+  constructor(public nav: NavController, public healingService: HealingService, public platform: Platform, private navParams: NavParams, public modalCtrl: ModalController) {
     // set sample data
     let id = navParams.get('id');
     this.healing = healingService.getItem(id);
@@ -41,6 +43,11 @@ export class HealingDetailPage {
     for (let key in this.healing.reviews) {
       this.ratingValues[this.healing.reviews[key].rating - 1]++;
     }
+  }
+
+  presentModal() {
+    let modal = this.modalCtrl.create(TestPage, { id: 'healing' });
+    modal.present();
   }
 
   // make array with range is n

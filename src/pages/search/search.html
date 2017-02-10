@@ -6,14 +6,12 @@
 -->
 <ion-header>
 
-  <ion-navbar color="white">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title [hidden]="(searchBy != 1) || showTypes">Restaurants</ion-title>
-    <ion-title [hidden]="(searchBy != 2) || showTypes">Hotels</ion-title>
-    <ion-title [hidden]="(searchBy != 3) || showTypes">Attractions</ion-title>
-    <ion-input placeholder="Search: City or Place" [hidden]="!showTypes" autofocus></ion-input>
+  <ion-navbar color="white" class="nanum">
+    
+    <ion-title [hidden]="(searchBy != 1) || showTypes">자전거여행</ion-title>
+    <ion-title [hidden]="(searchBy != 2) || showTypes">사천여행</ion-title>
+    <ion-title [hidden]="(searchBy != 3) || showTypes">커피여행</ion-title>
+    <ion-input placeholder="나라 및 도시 이름으로 검색해보세요" [hidden]="!showTypes" autofocus></ion-input>
     <ion-buttons [hidden]="showTypes" end>
       <button ion-button (click)="showForm()">
         <ion-icon name="search" color="primary"></ion-icon>
@@ -24,27 +22,28 @@
 </ion-header>
 
 <ion-content class="search">
+  <!--
   <ion-toolbar [hidden]="showTypes" color="white">
     <span>All Cuisine, Popular Near Me</span>
     <span class="pull-right" color="primary" (click)="showFilter()">Filter</span>
   </ion-toolbar>
-
+  -->
   <!-- Show map here -->
   <div id="map-search" [ngClass]="{'full-size': showFullMap}"></div>
 
-  <ion-list class="list-full-border items">
+  <ion-list class="list-full-border items nanum">
     <ion-item *ngFor="let item of items" (click)="viewItem(item.id)">
       <ion-thumbnail item-left>
         <img src="{{ item.thumb }}">
       </ion-thumbnail>
       <div>
         <span class="item-title bold">{{ item.name }}</span>
-        <span class="pull-right text-sm" color="gray">{{ item.location.distance }} km</span>
+        <span class="pull-right text-sm" color="gray">{{ item.location.distance }} 2 km</span>
       </div>
       <div>
         <ion-icon name="md-star" color="restaurant-color" *ngFor="let star of range(item.rating)"></ion-icon>
         <ion-icon name="md-star" color="gray" *ngFor="let star of range(5 - item.rating)"></ion-icon>
-        <span class="text-sm" color="gray">{{ item.reviews.length }} reviews</span>
+        <span class="text-sm" color="gray"> 후기 {{ item.reviews.length }}</span>
       </div>
     </ion-item>
   </ion-list>
@@ -52,32 +51,32 @@
   <!--search category-->
   <div class="modal-bg" [hidden]="!showTypes">
 
-    <ion-list class="search-cat list-full-border">
+    <ion-list class="search-cat list-full-border nanum">  
+      <ion-item (click)="search(1)">
+        <div class="thumb-bg attraction-bg pull-left" text-center>
+          <ion-icon name="bicycle" color="light"></ion-icon>
+        </div>
+        <div class="pull-left">
+          <h2>자전거여행</h2>
+          <span color="gray">11개의 상품</span>
+        </div>
+      </ion-item>
       <ion-item (click)="search(2)">
         <div class="thumb-bg hotel-bg pull-left" text-center>
           <ion-icon name="home" color="light"></ion-icon>
         </div>
         <div class="pull-left">
-          <h2>Stay - Hotels</h2>
-          <span color="gray">Nearby</span>
+          <h2>사천여행</h2>
+          <span color="gray">5개의 상품</span>
         </div>
       </ion-item>
-      <ion-item (click)="search(1)">
+      <ion-item (click)="search(3)">
         <div class="thumb-bg restaurant-bg pull-left" text-center>
           <ion-icon name="restaurant" color="light"></ion-icon>
         </div>
         <div class="pull-left">
-          <h2>Eat - Restaurants</h2>
-          <span color="gray">Nearby</span>
-        </div>
-      </ion-item>
-      <ion-item (click)="search(3)">
-        <div class="thumb-bg attraction-bg pull-left" text-center>
-          <ion-icon name="bicycle" color="light"></ion-icon>
-        </div>
-        <div class="pull-left">
-          <h2>Play - Attractions</h2>
-          <span color="gray">Nearby</span>
+          <h2>커피여행</h2>
+          <span color="gray">4개의 상품</span>
         </div>
       </ion-item>
     </ion-list>

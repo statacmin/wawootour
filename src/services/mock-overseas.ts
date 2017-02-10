@@ -27,7 +27,7 @@ export let OVERSEAS = [
       },
       {
         id: 4,
-        name: "비즈니스 여행",
+        name: "가족 여행",
         score: 64
       },
       {
@@ -100,7 +100,7 @@ export let OVERSEAS = [
       },
       {
         id: 4,
-        name: "비즈니스 여행",
+        name: "가족 여행",
         score: 40
       },
       {
@@ -173,7 +173,7 @@ export let OVERSEAS = [
       },
       {
         id: 4,
-        name: "비즈니스 여행",
+        name: "가족 여행",
         score: 64
       },
       {
@@ -246,7 +246,7 @@ export let OVERSEAS = [
       },
       {
         id: 4,
-        name: "비즈니스 여행",
+        name: "가족 여행",
         score: 40
       },
       {
